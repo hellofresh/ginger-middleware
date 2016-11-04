@@ -1,7 +1,6 @@
 package statsd
 
 import (
-	"strconv"
 	"strings"
 	"time"
 
@@ -11,11 +10,12 @@ import (
 )
 
 type Middleware struct {
-    client Client
+    Client Client
 }
 
 //Statsd func
 func (m *Middleware) Middleware() gin.HandlerFunc {
+	client := m.Client
 	// Initialize and configure the client and set options if given.
 	cc := newConfiguredClient(client)
 
