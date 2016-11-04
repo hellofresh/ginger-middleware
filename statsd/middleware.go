@@ -10,7 +10,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-type Middleware {
+type Middleware struct {
     client Client
 }
 
