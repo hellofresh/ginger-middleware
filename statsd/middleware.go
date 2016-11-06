@@ -9,12 +9,8 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-type Middleware struct {
-    Client Client
-}
-
-//Statsd func
-func (m *Middleware) Middleware() gin.HandlerFunc {
+// Middleware function for statsd
+func Middleware(client Client) gin.HandlerFunc {
 	client := m.Client
 	// Initialize and configure the client and set options if given.
 	cc := newConfiguredClient(client)
@@ -24,7 +20,7 @@ func (m *Middleware) Middleware() gin.HandlerFunc {
 		start := time.Now()
 		c.Next()
 
-        handler := c.HandlerName()
+		handler := c.HandlerName()
 		cc.IncrThroughput(handler)
 		cc.IncrStatusCode(c.Writer.Status(), handler)
 		cc.IncrSuccess(c.Errors, handler)
