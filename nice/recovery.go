@@ -15,9 +15,6 @@ func RecoveryWithWriter(f func(c *gin.Context, err interface{}), out io.Writer) 
 	return func(c *gin.Context) {
 		defer func() {
 			if err := recover(); err != nil {
-				httprequest, _ := httputil.DumpRequest(c.Request, false)
-				reset := string([]byte{27, 91, 48, 109})
-
 				f(c, err)
 			}
 		}()
