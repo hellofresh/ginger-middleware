@@ -11,7 +11,6 @@ import (
 
 // Middleware function for statsd
 func Middleware(client Client) gin.HandlerFunc {
-	client := m.Client
 	// Initialize and configure the client and set options if given.
 	cc := newConfiguredClient(client)
 
