@@ -2,12 +2,10 @@ package nice
 
 import (
 	"io"
+	"errors"
 	"net/http/httputil"
 
 	log "github.com/Sirupsen/logrus"
-
-	"github.com/go-errors/errors"
-
 	"github.com/gin-gonic/gin"
 )
 
