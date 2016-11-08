@@ -1,5 +1,12 @@
 package statsd
 
+import (
+	"strconv"
+	"time"
+
+	"github.com/gin-gonic/gin"
+)
+
 const (
 	DefaultResponseTimeEnabled = true
 	DefaultThroughputEnabled   = true
