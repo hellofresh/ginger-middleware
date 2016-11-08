@@ -2,7 +2,6 @@ package nice
 
 import (
 	"io"
-	"net/http/httputil"
 	
 	"github.com/gin-gonic/gin"
 )
