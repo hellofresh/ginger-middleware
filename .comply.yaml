@@ -1,0 +1,9 @@
+description: |
+  Ginger middleware for Gin Framework
+
+contact: purchasing-squad@hellofresh.com
+known-name: ginger-middleware
+squad: purchasing
+tribe: scm
+docs:
+- https://github.com/hellofresh/ginger-middleware
