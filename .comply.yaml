@@ -5,5 +5,7 @@ contact: purchasing-squad@hellofresh.com
 known-name: ginger-middleware
 squad: purchasing
 tribe: scm
+slack-channel: "#squad-purchasing-tech"
+jira_board: PROCULI
 docs:
 - https://github.com/hellofresh/ginger-middleware
